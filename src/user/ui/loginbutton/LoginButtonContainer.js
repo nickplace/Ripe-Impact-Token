@@ -3,11 +3,12 @@ import LoginButton from './LoginButton'
 import { loginUser } from './LoginButtonActions'
 
 const mapStateToProps = (state, ownProps) => {
+  return {type: ownProps.type}
 }
 
 const mapDispatchToProps = (dispatch) => {
-	console.log(dispatch)
   return {
+
     onLoginUserClick: (event) => {
       event.preventDefault();
 

@@ -1,3 +1,7 @@
 #Login {
 	text-align: center;
 }
+
+#Login .btn-primary {
+	margin-bottom: 1em;
+}

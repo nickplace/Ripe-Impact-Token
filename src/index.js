@@ -8,7 +8,9 @@ import { UserIsAuthenticated } from './util/wrappers.js'
 // Layouts
 import App from './App'
 import Home from './layouts/home/Home'
-import Dashboard from './layouts/dashboard/Dashboard'
+import Donator from './layouts/dashboard/Donator'
+import Organization from './layouts/dashboard/Organization'
+import NewOrg from './layouts/user/newOrg'
 import New from './layouts/contract/New'
 import Edit from './layouts/contract/Edit'
 import Complete from './layouts/contract/Complete'
@@ -25,11 +27,14 @@ ReactDOM.render((
       <Router history={history}>
         <Route path="/" component={App}>
           <IndexRoute component={Home} />
-          <Route path="dashboard" component={UserIsAuthenticated(Dashboard)} />
           <Route path="new" component={New} />
           <Route path="edit" component={Edit} />
           <Route path="complete" component={Complete} />
           <Route path="profile" component={UserIsAuthenticated(Profile)} />
+          <Route path="donator" component={Donator} />
+          <Route path="organization" component={Organization} />
+          <Route path="new_org" component={NewOrg} />
+
         </Route>
       </Router>
     </Provider>
